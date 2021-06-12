@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import com.example.sweater.domain.User;
 
 @Entity
 public class Message {
@@ -13,6 +14,15 @@ public class Message {
 
     private String text;
     private String tag;
+    private User author;
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
 
     public Message() {
     }
