@@ -10,9 +10,18 @@
         </div>
     </div>
 
-    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-        Add new Message
-    </a>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <form method="post" action="/main" class="form-inline" enctype="multipart/form-data">
+                <input type="text" name="text" class="form-control" placeholder="Text">
+                <input type="text" name="tag" class="form-control" placeholder="Tag">
+                <input type="file" name="file" class="form-control" placeholder="File">
+                <input type="hidden" name="_csrf" value="${_csrf.token}" />
+                <button type="submit" class="btn btn-primary ml-2">Add new Message</button>
+            </form>
+        </div>
+    </div>
+
     <div class="collapse" id="collapseExample">
         <div class="form-group mt-3">
             <form method="post" enctype="multipart/form-data">
